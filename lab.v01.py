@@ -151,13 +151,13 @@ payoff_matrix = [
 # If B sees A, that means there is a lot of room for growth so that is the best position B can be in
 # If B sees B, that means there is a lot of Bs around which is a positive signal for growth
 
-population_shareA = 0.8
-population_shareB = 0.2
+population_shareA = 0.9
+population_shareB = 0.1
 population = [population_shareA, population_shareB]
 
 risk_impact_matrix = [
-    [0, 0],
-    [-0.625, 4.2]
+    [0, -1],
+    [1, 2]
 ] 
 # the risk impact matrix is designed to reflect risk on B, so when A sees A or A sees B there is no risk impact for B
 # when B sees A, that is normal and even positive for B because it means B is not too oversaturated yet
@@ -168,7 +168,7 @@ USDC_vault = 9800
 tokenB_price_USDC = 1
 tokenB_supply_circ = 10000  #10000
 
-iterations = 300000 # 1000000
+iterations = 150000 # 1000000
 comission = 0.02
 floor_increase_factor = 1.2
 risk_lambda = 1
